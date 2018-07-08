@@ -7,6 +7,8 @@ package compresion_rick;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import javax.swing.JOptionPane;
@@ -22,7 +24,21 @@ public class Compressor implements Runnable
     {
         this.kill_me_please = kill_me_please;
         this.file = new File(file_path);
-        this.out_path = out_path;
+        if (out_path.endsWith("\\")) 
+        {
+            this.out_path = out_path.substring(0, out_path.length()-1);   
+        }
+        else
+        {
+            this.out_path = out_path;
+        }
+        
+        String  fileName = file.getAbsolutePath();
+        this.fileExtension = fileName.substring(fileName.lastIndexOf("."));
+            System.out.println("file ext: "+this.fileExtension);
+        this.fileName = fileName.substring(fileName.lastIndexOf("\\"), fileName.lastIndexOf("."));
+            System.out.println("file name: "+fileName);
+         
     }
     
     private void compress() throws  java.io.FileNotFoundException,
@@ -37,8 +53,8 @@ public class Compressor implements Runnable
             System.out.println("final length of byte concurrence: \n"+baits.size());
             //System.out.println(System.currentTimeMillis());
         binaryGuideConstruction();
-            
-            
+        writeHeathers();    
+        writeCompressBytes();    
     }
     
     private void count_and_organize() throws    java.io.FileNotFoundException,
@@ -47,6 +63,7 @@ public class Compressor implements Runnable
     {
         int idk;
         byte aless;
+        
         FileInputStream hurtado = new FileInputStream(file);
         while((idk=hurtado.read())!=-1)
         {
@@ -80,8 +97,25 @@ public class Compressor implements Runnable
             new Arbin(bait,triumph);
             triumph = triumph.getLelft_arbin();
         }
-        
-        System.out.println(i_am_seriously_falling_in_deep_depression);
+        //uncoment down to see the magic uwu
+        //System.out.println(i_am_seriously_falling_in_deep_depression);
+    }
+    
+    private void writeHeathers() throws FileNotFoundException,
+                                        java.io.IOException,
+                                        NullPointerException
+    {   
+        FileOutputStream chamorro = new FileOutputStream(out_path+fileName+".rick");
+        for (BinInfo bait : baits) 
+        {
+            chamorro.write(bait.getBits());
+        }
+        chamorro.close();
+    }
+    
+    private void writeCompressBytes()
+    {
+    
     }
     
     private void deCompress()
@@ -134,7 +168,9 @@ public class Compressor implements Runnable
     
     private boolean kill_me_please; //control variable for compress
     private File file;
-    private String out_path;
+    private String  out_path,
+                    fileExtension,
+                    fileName;
     private ArrayList<BinInfo> baits = new ArrayList();
     private Arbin i_am_seriously_falling_in_deep_depression;
     

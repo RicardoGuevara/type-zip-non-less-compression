@@ -16,10 +16,9 @@ public class Compresion_rick {
      */
     public static void main(String[] args) 
     {
-        gui.General user_int = new gui.General();
-        user_int.main(args);
+        ihurtmyself.main(args);
     }
     
-    
+    public static gui.General ihurtmyself = new gui.General();
     
 }

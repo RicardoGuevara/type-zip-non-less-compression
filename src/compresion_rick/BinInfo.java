@@ -43,6 +43,24 @@ public class BinInfo implements Comparable
     {
         this.recurrence_count++;
     }
+
+    public Byte getBits() {
+        return bits;
+    }
+
+    public void setBits(Byte bits) {
+        this.bits = bits;
+    }
+
+    public int getRecurrence_count() {
+        return recurrence_count;
+    }
+
+    public void setRecurrence_count(int recurrence_count) {
+        this.recurrence_count = recurrence_count;
+    }
+    
+    
     
     private Byte bits;
     private int recurrence_count;
