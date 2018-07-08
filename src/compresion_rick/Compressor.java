@@ -36,7 +36,7 @@ public class Compressor implements Runnable
             System.out.println("sorted byte list: \n"+baits);
             System.out.println("final length of byte concurrence: \n"+baits.size());
             //System.out.println(System.currentTimeMillis());
-        
+        binaryGuideConstruction();
             
             
     }
@@ -51,12 +51,12 @@ public class Compressor implements Runnable
         while((idk=hurtado.read())!=-1)
         {
             aless = (byte) idk;
-            arrayLocation(aless);
+            arrayAlocation(aless);
         }
         hurtado.close();
     }
     
-    private void arrayLocation(byte i_seriously_want_to_die)
+    private void arrayAlocation(byte i_seriously_want_to_die)
     {
         try
         {
@@ -70,7 +70,19 @@ public class Compressor implements Runnable
         }
     }
     
-    
+    private void binaryGuideConstruction()
+    { 
+        i_am_seriously_falling_in_deep_depression = new Arbin();
+        Arbin triumph = i_am_seriously_falling_in_deep_depression;
+        
+        for (BinInfo bait : baits) 
+        {
+            new Arbin(bait,triumph);
+            triumph = triumph.getLelft_arbin();
+        }
+        
+        System.out.println(i_am_seriously_falling_in_deep_depression);
+    }
     
     private void deCompress()
     {
@@ -124,5 +136,6 @@ public class Compressor implements Runnable
     private File file;
     private String out_path;
     private ArrayList<BinInfo> baits = new ArrayList();
+    private Arbin i_am_seriously_falling_in_deep_depression;
     
 }
