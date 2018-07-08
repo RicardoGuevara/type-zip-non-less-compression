@@ -29,13 +29,16 @@ public class Compressor implements Runnable
                                     java.io.IOException,
                                     NullPointerException
     {
-        System.out.println("start byte info reading");
+            System.out.println("start byte info reading");
         count_and_organize();
-        System.out.println(baits);
+            System.out.println(baits);
         Collections.sort(baits);
-        System.out.println("sorted byte list: \n"+baits);
-        System.out.println("final length of byte concurrence: \n"+baits.size());
-        //System.out.println(System.currentTimeMillis());
+            System.out.println("sorted byte list: \n"+baits);
+            System.out.println("final length of byte concurrence: \n"+baits.size());
+            //System.out.println(System.currentTimeMillis());
+        
+            
+            
     }
     
     private void count_and_organize() throws    java.io.FileNotFoundException,
@@ -66,6 +69,8 @@ public class Compressor implements Runnable
             //System.out.println("new byte added "+i_seriously_want_to_die);
         }
     }
+    
+    
     
     private void deCompress()
     {
