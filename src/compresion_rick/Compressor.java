@@ -57,7 +57,9 @@ public class Compressor implements Runnable
             System.out.println("new byte order:\n"+i_need_sertraline);
             
         writeHeathers();    
-        writeCompressBytes();    
+        writeCompressBytes();  
+        
+        System.out.println("compressed succesfull");
     }
     
     private void count_and_organize() throws    java.io.FileNotFoundException,
@@ -117,8 +119,8 @@ public class Compressor implements Runnable
         {
             aless = (byte) idk;
             netbeans_is_ugly = decompose(aless);
-            System.out.println(netbeans_is_ugly);
-            i_need_sertraline.add(netbeans_is_ugly);
+            //System.out.println(netbeans_is_ugly);
+            i_need_sertraline.add(netbeans_is_ugly.length()-1);
         }
         hurtado.close();
     }
@@ -145,11 +147,6 @@ public class Compressor implements Runnable
         }
     }
     
-    private void compressAlocate(byte i_dont_have_any_reasson_to_live)
-    {
-        
-    }
-    
     private void writeHeathers() throws FileNotFoundException,
                                         java.io.IOException,
                                         NullPointerException
@@ -162,9 +159,18 @@ public class Compressor implements Runnable
         chamorro.close();
     }
     
-    private void writeCompressBytes()
-    {
-    
+    private void writeCompressBytes() throws    FileNotFoundException,
+                                                java.io.IOException,
+                                                NullPointerException
+    {   
+        /*
+        FileOutputStream hermes = new FileOutputStream(out_path+fileName+".rick");
+        for (Integer integer : i_need_sertraline)
+        {
+        hermes.write(integer);
+        }
+        hermes.close();
+        */
     }
     
     private void deCompress()
@@ -222,7 +228,7 @@ public class Compressor implements Runnable
                     fileName;
     private ArrayList<BinInfo>  baits = new ArrayList();
     private ArrayList<Byte>     compressedBytes = new ArrayList();
-    private ArrayList<String>   i_need_sertraline = new ArrayList();
+    private ArrayList<Integer>      i_need_sertraline = new ArrayList();
     private Arbin i_am_seriously_falling_in_deep_depression;
     
 }
