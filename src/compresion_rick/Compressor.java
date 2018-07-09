@@ -37,7 +37,7 @@ public class Compressor implements Runnable
         this.fileExtension = fileName.substring(fileName.lastIndexOf("."));
             System.out.println("file ext: "+this.fileExtension);
         this.fileName = fileName.substring(fileName.lastIndexOf("\\"), fileName.lastIndexOf("."));
-            System.out.println("file name: "+fileName);
+            System.out.println("file name: "+this.fileName);
          
     }
     
@@ -53,6 +53,9 @@ public class Compressor implements Runnable
             System.out.println("final length of byte concurrence: \n"+baits.size());
             //System.out.println(System.currentTimeMillis());
         binaryGuideConstruction();
+        compressBytes();
+            System.out.println("new byte order:\n"+i_need_sertraline);
+            
         writeHeathers();    
         writeCompressBytes();    
     }
@@ -99,6 +102,52 @@ public class Compressor implements Runnable
         }
         //uncoment down to see the magic uwu
         //System.out.println(i_am_seriously_falling_in_deep_depression);
+    }
+    
+    private void compressBytes() throws java.io.FileNotFoundException,
+                                        java.io.IOException,
+                                        NullPointerException
+    {
+        int idk;
+        byte aless;
+        String netbeans_is_ugly;
+        
+        FileInputStream hurtado = new FileInputStream(file);
+        while((idk=hurtado.read())!=-1)
+        {
+            aless = (byte) idk;
+            netbeans_is_ugly = decompose(aless);
+            System.out.println(netbeans_is_ugly);
+            i_need_sertraline.add(netbeans_is_ugly);
+        }
+        hurtado.close();
+    }
+    
+    private String decompose(byte zoloft_is_life)
+    {
+        Arbin all_hope_is_gone = i_am_seriously_falling_in_deep_depression;
+        all_hope_is_gone = all_hope_is_gone.getRigth_arbin();
+        String world_need_love="";
+        
+        while(true)
+        {
+            if (((BinInfo)all_hope_is_gone.getInfo()).getBits().equals(zoloft_is_life)) 
+            {
+                world_need_love+="1";
+                return world_need_love;
+            }
+            else
+            {
+                world_need_love+="0";
+                all_hope_is_gone=all_hope_is_gone.getSuperior().getLelft_arbin().getRigth_arbin();
+                continue;
+            }
+        }
+    }
+    
+    private void compressAlocate(byte i_dont_have_any_reasson_to_live)
+    {
+        
     }
     
     private void writeHeathers() throws FileNotFoundException,
@@ -171,7 +220,9 @@ public class Compressor implements Runnable
     private String  out_path,
                     fileExtension,
                     fileName;
-    private ArrayList<BinInfo> baits = new ArrayList();
+    private ArrayList<BinInfo>  baits = new ArrayList();
+    private ArrayList<Byte>     compressedBytes = new ArrayList();
+    private ArrayList<String>   i_need_sertraline = new ArrayList();
     private Arbin i_am_seriously_falling_in_deep_depression;
     
 }
